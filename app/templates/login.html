@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <form method="POST">
+        {{ form.csrf_token }}
+
+        <fieldset>
+            <legend> Login</legend>
+            {{ form.email(placeholder="Informe seu email") }}
+            {{ form.password(placeholder="Informe sua senha") }}
+            {{ form.submit() }}
+        </fieldset>
+    </form>
+    {% include "components/notifications.html" %}
+</div>
+{% endblock content %}

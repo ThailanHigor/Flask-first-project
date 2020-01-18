@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+    {{ form.csrf_token }}
+
+    <fieldset>
+        <legend> Novo usuário</legend>
+        {{ form.name(placeholder="Informe seu nome") }}
+        {{ form.email(placeholder="Informe seu email") }}
+        {{ form.password(placeholder="Informe sua senha") }}
+        {{ form.submit() }}
+    </fieldset>
+</form>
+
+{% endblock content %}
